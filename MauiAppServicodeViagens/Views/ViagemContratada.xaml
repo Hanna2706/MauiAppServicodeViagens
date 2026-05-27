@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppServicodeViagens.Views.ViagemContratada"
+             Title="ViagemContratada"
+             Shell.NavBarIsVisible="False">
+    
+    <VerticalStackLayout Padding="10">
+        <Label Text="Viagens Continentais"
+               Margin="10"
+               FontFamily="Caveat"
+               FontSize="50"
+               TextColor="{StaticResource Primary}"
+               HorizontalOptions="Center"/>
+        <Label 
+            Text="{Binding PacoteSelecionado.Descricao}"
+            Margin="10"
+            TextColor="{StaticResource Primary}"
+            FontFamily="Courgette"
+            FontSize="40"
+            HorizontalOptions="Center" />
+
+        <Border 
+            Padding="10"
+            StrokeShape="RoundRectangle 10"
+            Margin="10"
+            BackgroundColor="{StaticResource Primary}"
+            >
+            <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                    <Label Text="Adultos: "
+                           TextColor="{StaticResource PrimaryDark}"/>
+                    <Label Text="{Binding QntAdultos}"
+                           TextColor="{StaticResource PrimaryDarkText}"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                    <Label Text="Crianças: "
+                           TextColor="{StaticResource PrimaryDark}"/>
+                    <Label Text="{Binding QntCriancas}"
+                           TextColor="{StaticResource PrimaryDarkText}"/>
+                </HorizontalStackLayout>
+            </StackLayout>
+        </Border>
+
+        <Border 
+            Padding="10"
+            StrokeShape="RoundRectangle 10"
+            Margin="10"
+            BackgroundColor="{StaticResource Primary}">
+
+            <Grid ColumnDefinitions="*, *, *"
+                  RowDefinitions="Auto, Auto">
+                <Label Grid.Row="0" Grid.Column="0" 
+                       Text="Inicio dos Sonhos:" 
+                       TextColor="{StaticResource PrimaryDark}"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Grid.Row="0" Grid.Column="1" 
+                       Text="Fim dos Sonhos:" 
+                       TextColor="{StaticResource PrimaryDark}"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Grid.Row="0" Grid.Column="2" 
+                       Text="Estadia" 
+                       TextColor="{StaticResource PrimaryDark}"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Grid.Row="1" Grid.Column="0" 
+                       Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" 
+                       TextColor="{StaticResource PrimaryDarkText}"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Grid.Row="1" Grid.Column="1" 
+                       Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}" 
+                       TextColor="{StaticResource PrimaryDarkText}"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Grid.Row="1" Grid.Column="2" 
+                       Text="{Binding Estadia}" 
+                       TextColor="{StaticResource PrimaryDarkText}"
+                       HorizontalTextAlignment="Center"/>
+
+            </Grid>
+        </Border>
+
+        <Border Margin="10"
+                StrokeShape="RoundRectangle 10"
+                Padding="10"
+                BackgroundColor="{StaticResource Primary}">
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Valor Total:"
+                       TextColor="{StaticResource PrimaryDark}"/>
+                <Label Text="{Binding ValorTotal, StringFormat='{}{0:c}'}"
+                       TextColor="{StaticResource PrimaryDarkText}"/>
+            </HorizontalStackLayout>
+        </Border>
+
+        <Button Text="Voltar"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked"
+                FontFamily="Caveat"
+                FontSize="18"/>
+    </VerticalStackLayout>
+</ContentPage>

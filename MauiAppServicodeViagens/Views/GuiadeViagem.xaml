@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppServicodeViagens.Views.GuiadeViagem"
+             Title="GuiadeViagem"
+             Shell.NavBarIsVisible="False">
+    
+    <VerticalStackLayout VerticalOptions="Center"
+                         Padding="5"
+                         Spacing="5">
+        
+            <Label Text="Viagens Continentais"
+               FontFamily="Caveat"
+               FontSize="40"
+               TextColor="{StaticResource Primary}"
+               HorizontalOptions="Center"/>
+
+            <Label Text="Cálculo da Diária"
+               FontFamily="Courgette"
+               FontSize="30"
+               TextColor="{StaticResource Primary}"
+               HorizontalOptions="Center"/>
+
+            <Border Padding="10"
+                Margin="2"
+                StrokeShape="RoundRectangle 10"
+                BackgroundColor="{StaticResource PrimaryDark}">
+
+                <VerticalStackLayout>
+                    <Grid RowDefinitions="Auto, Auto"
+                      ColumnDefinitions="*, *, 2*">
+
+                        <Label Grid.Row="0" Grid.Column="0"
+                           Text="Adultos:"
+                           TextColor="{StaticResource Primary}"/>
+
+                        <Label Grid.Row="0" Grid.Column="1"
+                           TextColor="{StaticResource Primary}"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_adultos}"/>
+
+                        <Stepper Grid.Row="0" Grid.Column="2"
+                             x:Name="stp_adultos"
+                             Minimum="0"
+                             Maximum="10"
+                             Increment="1" />
+
+                        <Label Grid.Row="1" Grid.Column="0"
+                           Text="Crianças:"
+                           TextColor="{StaticResource Primary}"/>
+
+                        <Label Grid.Row="1" Grid.Column="1"
+                           TextColor="{StaticResource Primary}"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_criancas}"/>
+
+                        <Stepper Grid.Row="1" Grid.Column="2"
+                             x:Name="stp_criancas"
+                             Minimum="0"
+                             Maximum="10"
+                             Increment="1" />
+                    </Grid>
+
+                <Border Padding="5" 
+                        StrokeShape="RoundRectangle 10" 
+                        Margin="2"
+                        BackgroundColor="{StaticResource Primary}">
+                    
+                    <VerticalStackLayout Spacing="5">
+
+                        <Label Text="Qual seu destino:"
+                               TextTransform="Uppercase"
+                               FontSize="Subtitle"
+                               TextColor="{StaticResource PrimaryDark}"
+                               HorizontalOptions="Center"/>
+
+                        <Picker x:Name="pck_paises"
+                                Title="Selecione seu país"
+                                TitleColor="{StaticResource PrimaryDarkText}"
+                                ItemDisplayBinding="{Binding Descricao}"
+                                BackgroundColor="{StaticResource PrimaryDark}"/>
+
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Padding="5" 
+                        StrokeShape="RoundRectangle 10" 
+                        Margin="2"
+                        BackgroundColor="{StaticResource Primary}">
+                        <VerticalStackLayout Spacing="5">
+
+                            <Label Text="Escolha seu pacote de viagem"
+                               TextTransform="Uppercase"
+                               FontSize="Subtitle"
+                               TextColor="{StaticResource PrimaryDark}"
+                               HorizontalOptions="Center"/>
+
+                            <Picker x:Name="pck_pacote"
+                                Title="Selecione sua Experiência"
+                                TitleColor="{StaticResource PrimaryDarkText}"
+                                ItemDisplayBinding="{Binding Descricao}"
+                                BackgroundColor="{StaticResource PrimaryDark}"/>
+
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border Padding="2"
+                        StrokeShape="RoundRectangle 10"
+                        Margin="5"
+                        BackgroundColor="{StaticResource Primary}">
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="Período da Viagem" 
+                               TextTransform="Uppercase"
+                               FontSize="Subtitle"
+                               TextColor="{StaticResource PrimaryDark}"
+                               HorizontalOptions="Center"
+                               Margin="2"/>
+
+                            <HorizontalStackLayout>
+                                <Label Text="Inicio:" 
+                                   TextColor="{StaticResource PrimaryDarkText}"
+                                   Margin="10"/>
+                                <DatePicker x:Name="dtpck_checkin"
+                                        DateSelected="dtpck_checkin_DateSelected"
+                                        Format="dd/MM/yyyy" 
+                                        BackgroundColor="{StaticResource PrimaryDark}"/>
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout Margin="2">
+                                <Label Text="Fim:"
+                                   TextColor="{StaticResource PrimaryDarkText}"
+                                   Margin="15"/>
+                                <DatePicker x:Name="dtpck_checkout" 
+                                        Format="dd/MM/yyyy"
+                                        BackgroundColor="{StaticResource PrimaryDark}"/>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Button 
+                    Margin="2" 
+                    Text="Avançar" 
+                    Clicked="Button_Clicked"
+                    FontFamily="Caveat"
+                    FontSize="18"/>
+
+                    <Button 
+                    Margin="2" 
+                    Text="Voltar" 
+                    Clicked="Button_Clicked_1"
+                    FontFamily="Caveat"
+                    FontSize="18"/>
+
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+</ContentPage>
