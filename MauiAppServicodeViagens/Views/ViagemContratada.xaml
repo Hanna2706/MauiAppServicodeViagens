@@ -9,21 +9,21 @@
         <Label Text="Viagens Continentais"
                Margin="10"
                FontFamily="Arizonia"
-               FontSize="40"
+               FontSize="35"
                TextColor="{StaticResource Primary}"
                HorizontalOptions="Center"/>
         <Label Text="{Binding PaisSelecionado.Descricao}"
                Margin="10"
                TextColor="{StaticResource Primary}"
                FontFamily="Caveat"
-               FontSize="30"
+               FontSize="25"
                HorizontalOptions="Center"/>
         <Label 
             Text="{Binding PacoteSelecionado.Descricao}"
             Margin="10"
             TextColor="{StaticResource Primary}"
             FontFamily="Caveat"
-            FontSize="30"
+            FontSize="25"
             HorizontalOptions="Center" />
 
         <Border 
