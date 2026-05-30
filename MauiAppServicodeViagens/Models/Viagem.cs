@@ -2,6 +2,7 @@
 {
     public class Viagem
     {
+        public Paises PaisSelecionado { get; set; }
         public Pacotes PacoteSelecionado { get; set; }
         public int QntAdultos { get; set; }
         public int QntCriancas { get; set; }

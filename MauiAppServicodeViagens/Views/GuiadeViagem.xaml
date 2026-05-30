@@ -10,55 +10,57 @@
                          Spacing="5">
         
             <Label Text="Viagens Continentais"
-               FontFamily="Caveat"
-               FontSize="40"
-               TextColor="{StaticResource Primary}"
-               HorizontalOptions="Center"/>
+                   FontFamily="Arizonia"
+                   FontSize="30"
+                   TextColor="{StaticResource Primary}"
+                   HorizontalOptions="Center"/>
 
             <Label Text="Cálculo da Diária"
-               FontFamily="Courgette"
-               FontSize="30"
-               TextColor="{StaticResource Primary}"
-               HorizontalOptions="Center"/>
+                   FontFamily="Caveat"
+                   FontSize="20"
+                   TextColor="{StaticResource Primary}"
+                   HorizontalOptions="Center"/>
 
             <Border Padding="10"
-                Margin="2"
-                StrokeShape="RoundRectangle 10"
-                BackgroundColor="{StaticResource PrimaryDark}">
+                    Margin="2"
+                    StrokeShape="RoundRectangle 10"
+                    BackgroundColor="{StaticResource PrimaryDark}">
 
                 <VerticalStackLayout>
                     <Grid RowDefinitions="Auto, Auto"
-                      ColumnDefinitions="*, *, 2*">
+                          ColumnDefinitions="*, *, 2*">
 
                         <Label Grid.Row="0" Grid.Column="0"
-                           Text="Adultos:"
-                           TextColor="{StaticResource Primary}"/>
+                               Text="Adultos:"
+                               FontFamily="Courgette"
+                               TextColor="{StaticResource Primary}"/>
 
                         <Label Grid.Row="0" Grid.Column="1"
-                           TextColor="{StaticResource Primary}"
-                           Text="{Binding Value}"
-                           BindingContext="{x:Reference stp_adultos}"/>
+                               TextColor="{StaticResource Primary}"
+                               Text="{Binding Value}"
+                               BindingContext="{x:Reference stp_adultos}"/>
 
                         <Stepper Grid.Row="0" Grid.Column="2"
-                             x:Name="stp_adultos"
-                             Minimum="0"
-                             Maximum="10"
-                             Increment="1" />
+                                 x:Name="stp_adultos"
+                                 Minimum="0"
+                                 Maximum="10"
+                                 Increment="1" />
 
                         <Label Grid.Row="1" Grid.Column="0"
-                           Text="Crianças:"
-                           TextColor="{StaticResource Primary}"/>
+                               Text="Crianças:"
+                               FontFamily="Courgette"
+                               TextColor="{StaticResource Primary}"/>
 
                         <Label Grid.Row="1" Grid.Column="1"
-                           TextColor="{StaticResource Primary}"
-                           Text="{Binding Value}"
-                           BindingContext="{x:Reference stp_criancas}"/>
+                               TextColor="{StaticResource Primary}"
+                               Text="{Binding Value}"
+                               BindingContext="{x:Reference stp_criancas}"/>
 
                         <Stepper Grid.Row="1" Grid.Column="2"
-                             x:Name="stp_criancas"
-                             Minimum="0"
-                             Maximum="10"
-                             Increment="1" />
+                                 x:Name="stp_criancas"
+                                 Minimum="0"
+                                 Maximum="10"
+                                 Increment="1" />
                     </Grid>
 
                 <Border Padding="5" 
@@ -68,15 +70,17 @@
                     
                     <VerticalStackLayout Spacing="5">
 
-                        <Label Text="Qual seu destino:"
+                        <Label Text="Qual seu destino"
                                TextTransform="Uppercase"
+                               FontFamily="Caveat"
                                FontSize="Subtitle"
-                               TextColor="{StaticResource PrimaryDark}"
+                               TextColor="White"
                                HorizontalOptions="Center"/>
 
                         <Picker x:Name="pck_paises"
-                                Title="Selecione seu país"
-                                TitleColor="{StaticResource PrimaryDarkText}"
+                                Title="Selecione seu País"
+                                FontFamily="Courgette"
+                                TitleColor="White"
                                 ItemDisplayBinding="{Binding Descricao}"
                                 BackgroundColor="{StaticResource PrimaryDark}"/>
 
@@ -90,49 +94,56 @@
                         <VerticalStackLayout Spacing="5">
 
                             <Label Text="Escolha seu pacote de viagem"
-                               TextTransform="Uppercase"
-                               FontSize="Subtitle"
-                               TextColor="{StaticResource PrimaryDark}"
-                               HorizontalOptions="Center"/>
+                                   TextTransform="Uppercase"
+                                   FontFamily="Caveat"
+                                   FontSize="Subtitle"
+                                   TextColor="White"
+                                   HorizontalOptions="Center"/>
 
                             <Picker x:Name="pck_pacote"
-                                Title="Selecione sua Experiência"
-                                TitleColor="{StaticResource PrimaryDarkText}"
-                                ItemDisplayBinding="{Binding Descricao}"
-                                BackgroundColor="{StaticResource PrimaryDark}"/>
+                                    Title="Selecione sua Experiência"
+                                    TitleColor="White"
+                                    FontFamily="Courgette"
+                                    ItemDisplayBinding="{Binding Descricao}"
+                                    BackgroundColor="{StaticResource PrimaryDark}"/>
 
                         </VerticalStackLayout>
                     </Border>
 
                     <Border Padding="2"
-                        StrokeShape="RoundRectangle 10"
-                        Margin="5"
-                        BackgroundColor="{StaticResource Primary}">
+                            StrokeShape="RoundRectangle 10"
+                            Margin="5"
+                            BackgroundColor="{StaticResource Primary}">
                         <VerticalStackLayout Spacing="5">
                             <Label Text="Período da Viagem" 
-                               TextTransform="Uppercase"
-                               FontSize="Subtitle"
-                               TextColor="{StaticResource PrimaryDark}"
-                               HorizontalOptions="Center"
-                               Margin="2"/>
+                                   TextTransform="Uppercase"
+                                   FontFamily="Caveat"
+                                   FontSize="Subtitle"
+                                   TextColor="White"
+                                   HorizontalOptions="Center"
+                                   Margin="2"/>
 
                             <HorizontalStackLayout>
-                                <Label Text="Inicio:" 
-                                   TextColor="{StaticResource PrimaryDarkText}"
-                                   Margin="10"/>
+                                <Label Text="Início:" 
+                                       TextColor="White"
+                                       FontFamily="Courgette"
+                                       Margin="10"/>
                                 <DatePicker x:Name="dtpck_checkin"
-                                        DateSelected="dtpck_checkin_DateSelected"
-                                        Format="dd/MM/yyyy" 
-                                        BackgroundColor="{StaticResource PrimaryDark}"/>
+                                            DateSelected="dtpck_checkin_DateSelected"
+                                            Format="dd/MM/yyyy"
+                                            TextColor="{StaticResource Primary}"
+                                            BackgroundColor="{StaticResource PrimaryDark}"/>
                             </HorizontalStackLayout>
 
                             <HorizontalStackLayout Margin="2">
                                 <Label Text="Fim:"
-                                   TextColor="{StaticResource PrimaryDarkText}"
-                                   Margin="15"/>
+                                       TextColor="White"
+                                       FontFamily="Courgette"
+                                       Margin="15"/>
                                 <DatePicker x:Name="dtpck_checkout" 
-                                        Format="dd/MM/yyyy"
-                                        BackgroundColor="{StaticResource PrimaryDark}"/>
+                                            Format="dd/MM/yyyy"
+                                            TextColor="{StaticResource Primary}"
+                                            BackgroundColor="{StaticResource PrimaryDark}"/>
                             </HorizontalStackLayout>
                         </VerticalStackLayout>
                     </Border>

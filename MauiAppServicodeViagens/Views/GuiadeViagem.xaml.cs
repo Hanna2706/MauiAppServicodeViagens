@@ -8,6 +8,7 @@ public partial class GuiadeViagem : ContentPage
 	{
 		InitializeComponent();
 
+        pck_paises.ItemsSource = App.Lista_paises;
 		pck_pacote.ItemsSource = App.Lista_pacotes;
 
 		dtpck_checkin.MinimumDate = DateTime.Now;
@@ -23,6 +24,7 @@ public partial class GuiadeViagem : ContentPage
 		{
             Viagem h = new Viagem
             {
+                PaisSelecionado = (Paises)pck_paises.SelectedItem,
                 PacoteSelecionado = (Pacotes)pck_pacote.SelectedItem,
                 QntAdultos = Convert.ToInt32(stp_adultos.Value),
                 QntCriancas = Convert.ToInt32(stp_criancas.Value),

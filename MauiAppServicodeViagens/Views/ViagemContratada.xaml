@@ -9,15 +9,21 @@
         <Label Text="Viagens Continentais"
                Margin="10"
                FontFamily="Caveat"
-               FontSize="50"
+               FontSize="40"
                TextColor="{StaticResource Primary}"
+               HorizontalOptions="Center"/>
+        <Label Text="{Binding PaisSelecionado.Descricao}"
+               Margin="10"
+               TextColor="{StaticResource Primary}"
+               FontFamily="Courgette"
+               FontSize="30"
                HorizontalOptions="Center"/>
         <Label 
             Text="{Binding PacoteSelecionado.Descricao}"
             Margin="10"
             TextColor="{StaticResource Primary}"
             FontFamily="Courgette"
-            FontSize="40"
+            FontSize="30"
             HorizontalOptions="Center" />
 
         <Border 

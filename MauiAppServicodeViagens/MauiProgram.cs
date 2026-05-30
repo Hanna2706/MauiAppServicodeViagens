@@ -13,9 +13,10 @@ namespace MauiAppServicodeViagens
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                    fonts.AddFont("Arizonia-Regular", "Arizonia");
-                    fonts.AddFont("Courgette-Regular", "Courgette");
-                    fonts.AddFont("Caveat-Regular", "Caveat");
+                    fonts.AddFont("Arizonia-Regular.ttf", "Arizonia");
+                    fonts.AddFont("Courgette-Regular.ttf", "Courgette");
+                    fonts.AddFont("Caveat-Regular.ttf", "Caveat");
+                    fonts.AddFont("Kalam-Regular.ttf", "Kalam");
                 });
 
 #if DEBUG
