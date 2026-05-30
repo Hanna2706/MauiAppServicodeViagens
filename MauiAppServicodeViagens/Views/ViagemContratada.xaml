@@ -8,21 +8,21 @@
     <VerticalStackLayout Padding="10">
         <Label Text="Viagens Continentais"
                Margin="10"
-               FontFamily="Caveat"
+               FontFamily="Arizonia"
                FontSize="40"
                TextColor="{StaticResource Primary}"
                HorizontalOptions="Center"/>
         <Label Text="{Binding PaisSelecionado.Descricao}"
                Margin="10"
                TextColor="{StaticResource Primary}"
-               FontFamily="Courgette"
+               FontFamily="Caveat"
                FontSize="30"
                HorizontalOptions="Center"/>
         <Label 
             Text="{Binding PacoteSelecionado.Descricao}"
             Margin="10"
             TextColor="{StaticResource Primary}"
-            FontFamily="Courgette"
+            FontFamily="Caveat"
             FontSize="30"
             HorizontalOptions="Center" />
 
@@ -37,14 +37,14 @@
                     <Label Text="Adultos: "
                            TextColor="{StaticResource PrimaryDark}"/>
                     <Label Text="{Binding QntAdultos}"
-                           TextColor="{StaticResource PrimaryDarkText}"/>
+                           TextColor="White"/>
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Crianças: "
                            TextColor="{StaticResource PrimaryDark}"/>
                     <Label Text="{Binding QntCriancas}"
-                           TextColor="{StaticResource PrimaryDarkText}"/>
+                           TextColor="White"/>
                 </HorizontalStackLayout>
             </StackLayout>
         </Border>
@@ -74,17 +74,17 @@
 
                 <Label Grid.Row="1" Grid.Column="0" 
                        Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}" 
-                       TextColor="{StaticResource PrimaryDarkText}"
+                       TextColor="White"
                        HorizontalTextAlignment="Center"/>
 
                 <Label Grid.Row="1" Grid.Column="1" 
                        Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}" 
-                       TextColor="{StaticResource PrimaryDarkText}"
+                       TextColor="White"
                        HorizontalTextAlignment="Center"/>
 
                 <Label Grid.Row="1" Grid.Column="2" 
                        Text="{Binding Estadia}" 
-                       TextColor="{StaticResource PrimaryDarkText}"
+                       TextColor="White"
                        HorizontalTextAlignment="Center"/>
 
             </Grid>
@@ -99,7 +99,7 @@
                 <Label Text="Valor Total:"
                        TextColor="{StaticResource PrimaryDark}"/>
                 <Label Text="{Binding ValorTotal, StringFormat='{}{0:c}'}"
-                       TextColor="{StaticResource PrimaryDarkText}"/>
+                       TextColor="White"/>
             </HorizontalStackLayout>
         </Border>
 

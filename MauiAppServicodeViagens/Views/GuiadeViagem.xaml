@@ -148,21 +148,14 @@
                         </VerticalStackLayout>
                     </Border>
 
-                    <Button 
+                <Button 
                     Margin="2" 
                     Text="Avançar" 
                     Clicked="Button_Clicked"
                     FontFamily="Caveat"
                     FontSize="18"/>
 
-                    <Button 
-                    Margin="2" 
-                    Text="Voltar" 
-                    Clicked="Button_Clicked_1"
-                    FontFamily="Caveat"
-                    FontSize="18"/>
-
-                </VerticalStackLayout>
+            </VerticalStackLayout>
             </Border>
         </VerticalStackLayout>
 </ContentPage>
